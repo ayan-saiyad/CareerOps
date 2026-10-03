@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CareerOps Workday-like local fixture</title>
+    <style>
+      body { max-width: 760px; margin: 3rem auto; padding: 0 1.25rem; color: #18213a; font: 16px/1.45 system-ui, sans-serif; }
+      form, fieldset { display: grid; gap: 1rem; }
+      fieldset { padding: 1.25rem; border: 1px solid #ccd5eb; border-radius: .75rem; }
+      label, [role="radiogroup"] { display: grid; gap: .35rem; }
+      input, select, textarea, [role="combobox"] { min-height: 2.4rem; padding: .35rem .5rem; border: 1px solid #7e8aa6; border-radius: .35rem; font: inherit; }
+      [role="combobox"] { background: #f4f6fc; color: #52607e; }
+      .choices { display: flex; gap: 1rem; }
+      .choices label { display: flex; align-items: center; }
+      .note { color: #56617b; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Workday-like local form fixture</h1>
+    <p class="note">Synthetic markup for extension development. It is not affiliated with Workday or an employer.</p>
+
+    <form>
+      <fieldset data-automation-id="legalNameSection">
+        <legend>Contact information</legend>
+        <div data-automation-id="firstNameField">
+          <label data-automation-id="formLabel" for="wd-first-name">First Name</label>
+          <input id="wd-first-name" data-automation-id="textInput" name="legalNameSection_firstName" autocomplete="given-name" required />
+        </div>
+        <div data-automation-id="lastNameField">
+          <label data-automation-id="formLabel" for="wd-last-name">Last Name</label>
+          <input id="wd-last-name" data-automation-id="textInput" name="legalNameSection_lastName" autocomplete="family-name" required />
+        </div>
+        <div data-automation-id="emailSection">
+          <label data-automation-id="formLabel" for="wd-email">Email Address</label>
+          <input id="wd-email" data-automation-id="textInput" name="email" type="email" autocomplete="email" required />
+        </div>
+      </fieldset>
+
+      <fieldset data-automation-id="questionnaireSection">
+        <legend>Application questions</legend>
+        <div data-automation-id="questionnaireQuestion">
+          <span id="source-question" data-automation-id="formLabel">How did you hear about us?</span>
+          <select aria-labelledby="source-question" name="source" required>
+            <option value="">Choose one</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="referral">Employee referral</option>
+          </select>
+        </div>
+
+        <div data-automation-id="questionnaireQuestion" role="radiogroup" aria-labelledby="prior-employee-question">
+          <span id="prior-employee-question" data-automation-id="formLabel">Have you previously worked here?</span>
+          <div class="choices">
+            <label><input type="radio" name="priorEmployee" value="yes" /> Yes</label>
+            <label><input type="radio" name="priorEmployee" value="no" /> No</label>
+          </div>
+        </div>
+
+        <div data-automation-id="questionnaireQuestion">
+          <label data-automation-id="formLabel" for="custom-answer">What project are you most proud of?</label>
+          <textarea id="custom-answer" name="projectProudOf" rows="3" required></textarea>
+        </div>
+
+        <div data-automation-id="questionnaireQuestion">
+          <span id="custom-combobox-question" data-automation-id="formLabel">Preferred interview time</span>
+          <div role="combobox" tabindex="0" aria-labelledby="custom-combobox-question">Choose a time</div>
+        </div>
+      </fieldset>
+
+      <fieldset data-automation-id="eligibilitySection">
+        <legend>Reusable eligibility questions</legend>
+        <label>Account password <input type="password" autocomplete="current-password" /></label>
+        <label>Resume <input type="file" accept=".pdf" /></label>
+        <label>Are you authorized to work in the United States?
+          <select name="workAuthorization" required><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option></select>
+        </label>
+        <label>Will you now or in the future require sponsorship for employment visa status?
+          <select name="sponsorship" required><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option></select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Always manual</legend>
+        <label><input type="checkbox" name="terms" required /> I agree to the legal terms and conditions.</label>
+        <label>Voluntary self-identification: gender
+          <select name="gender"><option value="">Choose not to answer</option><option>Woman</option><option>Man</option></select>
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit application</button>
+    </form>
+  </body>
+</html>

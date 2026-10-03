@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CareerOps Safe Fill</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div class="logo" aria-hidden="true">CO</div>
+        <div>
+          <p class="eyebrow">LOCAL-ONLY ADAPTER</p>
+          <h1>Safe Fill</h1>
+        </div>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <div class="status-row">
+          <span id="statusDot" class="status-dot" aria-hidden="true"></span>
+          <p id="statusTitle">Checking this page…</p>
+        </div>
+        <p id="statusMessage" class="muted">CareerOps only runs on a local test fixture.</p>
+      </section>
+
+      <section class="guardrails" aria-label="Safety guardrails">
+        <p><strong>Always manual:</strong> sign-in, documents, agreements, consent, attestations, demographic disclosures, custom widgets, and submission.</p>
+        <p>CareerOps detects only questions currently on this form. It fills reusable profile facts and explicitly verified eligibility answers after review.</p>
+      </section>
+
+      <button id="syncButton" class="secondary" type="button" disabled hidden>
+        Sync reviewed FillPlan for this browser session
+      </button>
+
+      <button id="previewButton" class="primary" type="button" disabled>
+        Preview reviewed fields
+      </button>
+
+      <section id="planSection" class="plan" hidden aria-labelledby="planHeading">
+        <div class="plan-heading">
+          <div>
+            <p class="eyebrow">REVIEW BEFORE FILLING</p>
+            <h2 id="planHeading">Fill plan</h2>
+          </div>
+          <span id="planSource" class="source-chip"></span>
+        </div>
+        <p id="planSummary" class="muted"></p>
+        <ul id="planList" class="plan-list"></ul>
+        <section id="requirementsSection" class="requirements" aria-labelledby="requirementsHeading" hidden>
+          <div class="requirements-heading">
+            <div>
+              <p class="eyebrow">CURRENT FORM REQUIREMENTS</p>
+              <h3 id="requirementsHeading">Needs your input</h3>
+            </div>
+            <span id="requirementsCount" class="requirement-count"></span>
+          </div>
+          <p id="requirementsSummary" class="muted"></p>
+          <ul id="requirementsList" class="requirements-list"></ul>
+        </section>
+        <button id="fillButton" class="primary" type="button" disabled>
+          Fill selected fields — never submit
+        </button>
+      </section>
+
+      <p id="resultMessage" class="result" aria-live="polite"></p>
+      <footer>Plans expire in 5 minutes. Synced data remains only in extension-worker memory.</footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

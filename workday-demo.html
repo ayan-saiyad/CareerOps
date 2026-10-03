@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>CareerOps Workday Fixture</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/workday-demo.css" />
+  </head>
+  <body class="wd-body">
+    <header class="wd-topbar">
+      <a href="index.html" class="wd-back">← CareerOps</a>
+      <div class="wd-wordmark"><span aria-hidden="true">W</span><strong>Workday</strong><small>synthetic fixture</small></div>
+    </header>
+
+    <main class="wd-shell">
+      <section class="wd-hero" aria-labelledby="wd-role-title">
+        <p class="eyebrow">CareerOps adapter test surface</p>
+        <h1 id="wd-role-title">Software Engineer, Platform</h1>
+        <p>Northstar Commerce · Remote (United States)</p>
+      </section>
+
+      <div id="wd-plan-status" class="wd-plan-status" role="status">
+        No local FillPlan detected. Create one in CareerOps, then return here and open the browser companion.
+      </div>
+
+      <section id="wd-application" class="wd-card" aria-labelledby="wd-application-title">
+        <header class="wd-card-header">
+          <div>
+            <p class="eyebrow">Step 1 of 4</p>
+            <h2 id="wd-application-title">My information</h2>
+          </div>
+          <span class="wd-progress">25% complete</span>
+        </header>
+
+        <form id="wd-fixture-form" novalidate>
+          <section data-automation-id="legalNameSection" class="wd-section" aria-labelledby="wd-name-heading">
+            <h3 id="wd-name-heading">Legal name</h3>
+            <div class="wd-grid">
+              <div class="wd-control" data-automation-id="legalNameSection_firstName">
+                <label data-automation-id="formLabel" for="wd-first-name">Legal First Name <span>*</span></label>
+                <input data-automation-id="input" id="wd-first-name" name="firstName" autocomplete="given-name" required />
+              </div>
+              <div class="wd-control" data-automation-id="legalNameSection_lastName">
+                <label data-automation-id="formLabel" for="wd-last-name">Legal Last Name <span>*</span></label>
+                <input data-automation-id="input" id="wd-last-name" name="lastName" autocomplete="family-name" required />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-preferred-name">Preferred Name</label>
+                <input data-automation-id="input" id="wd-preferred-name" name="preferredName" autocomplete="nickname" />
+              </div>
+            </div>
+          </section>
+
+          <section data-automation-id="contactInformationSection" class="wd-section" aria-labelledby="wd-contact-heading">
+            <h3 id="wd-contact-heading">Contact information</h3>
+            <div class="wd-grid">
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-email">Email Address <span>*</span></label>
+                <input data-automation-id="email" id="wd-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-phone">Phone Number <span>*</span></label>
+                <input data-automation-id="phone" id="wd-phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-city">City <span>*</span></label>
+                <input data-automation-id="input" id="wd-city" name="city" autocomplete="address-level2" required />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-state">State / Province</label>
+                <input data-automation-id="input" id="wd-state" name="state" autocomplete="address-level1" />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-linkedin">LinkedIn Profile</label>
+                <input data-automation-id="input" id="wd-linkedin" name="linkedin" type="url" autocomplete="url" />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-github">GitHub URL</label>
+                <input data-automation-id="input" id="wd-github" name="github" type="url" autocomplete="url" />
+              </div>
+              <div class="wd-control full-width">
+                <label data-automation-id="formLabel" for="wd-website">Portfolio or Personal Website</label>
+                <input data-automation-id="input" id="wd-website" name="website" type="url" autocomplete="url" />
+              </div>
+            </div>
+          </section>
+
+          <section data-automation-id="educationSection" class="wd-section" aria-labelledby="wd-education-heading">
+            <h3 id="wd-education-heading">Education</h3>
+            <div class="wd-grid">
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-school">School / University</label>
+                <input data-automation-id="input" id="wd-school" name="school" />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-degree">Degree</label>
+                <select data-automation-id="selectWidget" id="wd-degree" name="degree">
+                  <option value="">Select one</option>
+                  <option value="bachelors">Bachelor's</option>
+                  <option value="masters">Master's</option>
+                  <option value="phd">PhD</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-major">Field of Study / Major</label>
+                <input data-automation-id="input" id="wd-major" name="major" />
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-graduation">Expected Graduation Date</label>
+                <input data-automation-id="input" id="wd-graduation" name="graduation" placeholder="MM/YYYY" />
+              </div>
+            </div>
+          </section>
+
+          <section data-automation-id="applicationQuestionsSection" class="wd-section" aria-labelledby="wd-questions-heading">
+            <h3 id="wd-questions-heading">Application questions</h3>
+            <div class="wd-question-list">
+              <fieldset class="wd-question" data-automation-id="workAuthorizationQuestion">
+                <legend>Are you legally authorized to work in the United States? <span>*</span></legend>
+                <label><input data-automation-id="radioButton" type="radio" name="workAuthorization" value="yes" required /> Yes</label>
+                <label><input data-automation-id="radioButton" type="radio" name="workAuthorization" value="no" /> No</label>
+              </fieldset>
+              <fieldset class="wd-question" data-automation-id="sponsorshipQuestion">
+                <legend>Will you now or in the future require sponsorship for employment visa status? <span>*</span></legend>
+                <label><input data-automation-id="radioButton" type="radio" name="sponsorship" value="yes" required /> Yes</label>
+                <label><input data-automation-id="radioButton" type="radio" name="sponsorship" value="no" /> No</label>
+              </fieldset>
+              <div class="wd-control full-width" data-automation-id="startDateQuestion">
+                <label data-automation-id="formLabel" for="wd-start-date">Earliest available start date</label>
+                <input data-automation-id="input" id="wd-start-date" name="startDate" placeholder="MM/DD/YYYY" />
+              </div>
+              <div class="wd-control full-width" data-automation-id="salaryQuestion">
+                <label data-automation-id="formLabel" for="wd-salary">Desired base salary</label>
+                <input data-automation-id="input" id="wd-salary" name="salary" inputmode="numeric" />
+              </div>
+              <fieldset class="wd-question" data-automation-id="formerEmployeeQuestion">
+                <legend>Have you previously worked for Northstar Commerce?</legend>
+                <label><input data-automation-id="radioButton" type="radio" name="formerEmployee" value="yes" /> Yes</label>
+                <label><input data-automation-id="radioButton" type="radio" name="formerEmployee" value="no" /> No</label>
+              </fieldset>
+              <div class="wd-control full-width is-conditional" id="wd-former-employer-detail" hidden>
+                <label data-automation-id="formLabel" for="wd-former-employer">Please identify the former employer record</label>
+                <input data-automation-id="input" id="wd-former-employer" name="formerEmployerDetail" />
+              </div>
+              <div class="wd-control full-width" data-automation-id="customTextQuestion">
+                <label data-automation-id="formLabel" for="wd-why">Why are you interested in this role? <span>*</span></label>
+                <textarea data-automation-id="textarea" id="wd-why" name="whyThisRole" rows="5" required></textarea>
+                <span class="wd-help">A custom, free-text question: extension should present a reviewed candidate answer, never invent one.</span>
+              </div>
+              <div class="wd-control full-width" data-automation-id="companySpecificMotivationQuestion">
+                <label data-automation-id="formLabel" for="wd-company-motivation">What aspect of Northstar Commerce's platform mission motivates you? <span>*</span></label>
+                <textarea data-automation-id="textarea" id="wd-company-motivation" name="companySpecificMotivation" rows="5" required aria-describedby="wd-company-motivation-help"></textarea>
+                <span id="wd-company-motivation-help" class="wd-help">Company-tailored prompt: it stays blank until the candidate writes and explicitly approves a response.</span>
+              </div>
+            </div>
+          </section>
+
+          <section data-automation-id="voluntaryDisclosuresSection" class="wd-section wd-sensitive" aria-labelledby="wd-disclosures-heading">
+            <h3 id="wd-disclosures-heading">Voluntary disclosures</h3>
+            <div class="wd-grid">
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-gender">Gender</label>
+                <select data-automation-id="selectWidget" id="wd-gender" name="gender"><option value="">Select one</option><option>Prefer not to say</option><option>Female</option><option>Male</option></select>
+              </div>
+              <div class="wd-control">
+                <label data-automation-id="formLabel" for="wd-disability">Disability status</label>
+                <select data-automation-id="selectWidget" id="wd-disability" name="disability"><option value="">Select one</option><option>I do not wish to answer</option><option>Yes</option><option>No</option></select>
+              </div>
+            </div>
+            <p>These controls are intentionally in the fixture so the adapter can prove that it excludes them from automatic fill.</p>
+          </section>
+
+          <section data-automation-id="legalAgreementSection" class="wd-section wd-legal" aria-labelledby="wd-legal-heading">
+            <h3 id="wd-legal-heading">Legal acknowledgement</h3>
+            <label class="wd-agreement" for="wd-legal-attestation">
+              <input data-automation-id="checkbox" id="wd-legal-attestation" name="legalAttestation" type="checkbox" required />
+              <span>I certify that the information in this synthetic application is complete and accurate. <b aria-hidden="true">*</b></span>
+            </label>
+            <p>This required attestation intentionally remains a manual action. The browser companion never checks it.</p>
+          </section>
+
+          <div class="wd-actions">
+            <span>This is a local test page. No employer receives any information.</span>
+            <button type="submit" class="button">Submit synthetic application</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="wd-confirmation" class="wd-card wd-confirmation" hidden aria-labelledby="wd-confirmation-title">
+        <span aria-hidden="true">✓</span>
+        <p class="eyebrow">Synthetic confirmation only</p>
+        <h2 id="wd-confirmation-title">Your test application is recorded.</h2>
+        <p>This local fixture proves the UX path; it does not contact an employer or represent a real submission.</p>
+        <a class="button" href="index.html">Return to CareerOps</a>
+      </section>
+    </main>
+    <script type="module" src="src/workday-demo.js"></script>
+  </body>
+</html>

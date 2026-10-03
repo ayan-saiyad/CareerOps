@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "CareerOps Safe Fill Demo",
+  "version": "0.3.0",
+  "description": "A local-only, reviewed form-fill companion that previews current-form requirements before filling.",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "CareerOps Safe Fill Demo",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": ["form-adapter.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

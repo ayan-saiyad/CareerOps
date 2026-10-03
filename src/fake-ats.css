@@ -1,0 +1,34 @@
+.ats-body { min-height: 100vh; padding: 36px 18px 60px; background: #f5f7f5; }
+.ats-shell { width: min(840px, 100%); margin: 0 auto; }
+.ats-back { display: inline-block; margin-bottom: 27px; color: #42606b; font-size: .78rem; font-weight: 750; text-decoration: none; }
+.ats-back:hover { color: var(--mint-ink); }
+.ats-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.ats-header h1 { font-size: clamp(1.65rem, 4vw, 2.25rem); }
+.ats-logo { display: grid; width: 52px; height: 52px; flex: 0 0 auto; place-items: center; border-radius: 14px; background: var(--navy); color: var(--mint); font-family: Georgia, serif; font-size: 1.75rem; }
+.ats-company { margin: 6px 0 0; color: var(--muted); font-size: .84rem; }
+.ats-notice { margin-bottom: 15px; }
+.ats-card { border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: var(--shadow-sm); }
+.ats-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 23px 24px 18px; border-bottom: 1px solid var(--line); }
+.ats-card-header h2 { font-size: 1.45rem; }
+.ats-form { display: grid; gap: 26px; padding: 24px; }
+.ats-form fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.ats-form legend { margin-bottom: 14px; font-size: .83rem; font-weight: 850; }
+.ats-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.ats-form label { display: grid; gap: 6px; color: #40545d; font-size: .75rem; font-weight: 750; }
+.ats-form label span[aria-hidden="true"] { color: var(--danger); }
+.ats-form input, .ats-form select, .ats-form textarea { width: 100%; padding: 10px 11px; border: 1px solid var(--line-strong); border-radius: 8px; background: #fff; color: var(--ink); font-size: .82rem; font-weight: 500; }
+.ats-form input:focus, .ats-form select:focus, .ats-form textarea:focus { border-color: var(--mint-strong); outline: 3px solid rgba(55, 168, 121, .17); }
+.ats-form textarea { resize: vertical; }
+.full-width { grid-column: 1 / -1; }
+.attestation { display: flex !important; align-items: flex-start; gap: 9px !important; padding: 12px; border-radius: 10px; background: var(--surface-soft); font-weight: 600 !important; line-height: 1.45; }
+.attestation input { width: 15px !important; height: 15px; flex: 0 0 auto; margin: 2px 0 0; }
+.ats-submit-row { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-top: 18px; border-top: 1px solid var(--line); }
+.ats-submit-row p { max-width: 390px; margin: 0; color: var(--muted); font-size: .71rem; line-height: 1.45; }
+.fill-plan-preview { margin: 18px 24px 0; padding: 12px; border: 1px solid #bce4cf; border-radius: 10px; background: #effaf3; color: #235d42; font-size: .74rem; line-height: 1.45; }
+.fill-plan-preview ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0; padding: 0; list-style: none; }
+.fill-plan-preview li { padding: 3px 6px; border-radius: 5px; background: white; font-size: .67rem; font-weight: 750; }
+.confirmation-card { padding: 48px 28px; text-align: center; }
+.confirmation-icon { display: inline-grid; width: 52px; height: 52px; margin-bottom: 18px; place-items: center; border-radius: 50%; background: #dcf6e7; color: var(--mint-ink); font-size: 1.5rem; font-weight: 900; }
+.confirmation-card h2 { font-size: 1.7rem; }
+.confirmation-card p:not(.eyebrow) { max-width: 470px; margin: 11px auto 23px; color: var(--muted); font-size: .81rem; line-height: 1.5; }
+@media (max-width: 560px) { .ats-form-grid { grid-template-columns: 1fr; } .ats-submit-row, .ats-card-header { align-items: stretch; flex-direction: column; } .ats-submit-row .button { width: 100%; } }

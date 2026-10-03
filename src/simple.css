@@ -1,0 +1,130 @@
+body.careerops-simple {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 84% -10%, rgba(174, 233, 207, .33), transparent 31rem),
+    #f7f6f2;
+}
+
+.careerops-simple .simple-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px clamp(18px, 4vw, 36px);
+}
+
+.careerops-simple .simple-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.careerops-simple .simple-brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--navy);
+  color: var(--mint);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.careerops-simple .simple-brand strong,
+.careerops-simple .simple-brand small { display: block; }
+.careerops-simple .simple-brand strong { font-family: Georgia, serif; font-size: 1.15rem; letter-spacing: -.02em; }
+.careerops-simple .simple-brand small { margin-top: 1px; color: var(--muted); font-size: .67rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+
+.careerops-simple .simple-local-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: .77rem;
+  font-weight: 650;
+}
+
+.careerops-simple .simple-local-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--mint-strong); box-shadow: 0 0 0 4px rgba(55, 168, 121, .12); }
+
+.careerops-simple .simple-page { max-width: 1180px; margin: 0 auto; padding: 20px clamp(18px, 4vw, 36px) 60px; }
+.careerops-simple .simple-hero { max-width: 760px; margin: 20px 0 28px; }
+.careerops-simple .simple-hero h1 { max-width: 720px; }
+.careerops-simple .simple-hero p:last-child { max-width: 680px; margin: 13px 0 0; color: var(--muted); line-height: 1.55; }
+
+.careerops-simple .simple-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(290px, .75fr); gap: 18px; align-items: start; }
+.careerops-simple .simple-stack { display: grid; gap: 18px; }
+.careerops-simple .simple-card { padding: 21px; }
+.careerops-simple .simple-card h2 { font-size: 1.35rem; }
+.careerops-simple .simple-card > p { margin: 7px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+.careerops-simple .simple-step { display: inline-grid; width: 25px; height: 25px; margin-right: 8px; place-items: center; border-radius: 50%; background: #dff3e8; color: var(--mint-ink); font-size: .72rem; font-weight: 800; vertical-align: 2px; }
+.careerops-simple .simple-section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.careerops-simple .simple-badge { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 8px; border-radius: 999px; background: #edf5f0; color: var(--mint-ink); font-size: .67rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.careerops-simple .simple-badge.warn { background: #fff2d4; color: #835200; }
+.careerops-simple .simple-badge.manual { background: #fbe7e4; color: #9b3f35; }
+
+.careerops-simple .resume-box { display: grid; gap: 10px; margin-top: 16px; }
+.careerops-simple .resume-box textarea { width: 100%; min-height: 220px; padding: 13px; border: 1px solid var(--line-strong); border-radius: 12px; background: #fdfefd; color: var(--ink); line-height: 1.45; resize: vertical; }
+.careerops-simple .resume-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; }
+.careerops-simple .file-picker { position: relative; overflow: hidden; }
+.careerops-simple .file-picker input { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; }
+.careerops-simple .small-note { color: var(--muted); font-size: .74rem; line-height: 1.45; }
+
+.careerops-simple .default-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 17px; }
+.careerops-simple .default-grid label, .careerops-simple .answer-control { display: grid; gap: 6px; color: var(--muted); font-size: .75rem; font-weight: 750; }
+.careerops-simple .default-grid .span-two { grid-column: 1 / -1; }
+.careerops-simple .default-grid .simple-subheading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 4px 0 -2px; color: var(--ink); font-size: .82rem; font-weight: 800; }
+.careerops-simple .default-grid .simple-subheading span { color: var(--muted); font-size: .68rem; font-weight: 650; }
+.careerops-simple .default-grid input, .careerops-simple .default-grid select, .careerops-simple .answer-control input, .careerops-simple .answer-control select, .careerops-simple .answer-control textarea { width: 100%; min-height: 39px; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 9px; background: white; color: var(--ink); font-weight: 500; }
+.careerops-simple .answer-control textarea { min-height: 114px; resize: vertical; line-height: 1.45; }
+
+.careerops-simple .intake-result { display: grid; gap: 8px; margin-top: 15px; padding: 12px; border: 1px solid #d8e9df; border-radius: 11px; background: #f4faf6; }
+.careerops-simple .intake-result strong { font-size: .8rem; }
+.careerops-simple .intake-result p { margin: 0; color: var(--muted); font-size: .76rem; line-height: 1.45; }
+.careerops-simple .source-chip { display: inline-flex; margin-left: 6px; padding: 2px 6px; border-radius: 999px; background: #e2eefb; color: #225c85; font-size: .62rem; font-weight: 800; text-transform: uppercase; }
+
+.careerops-simple .queue-list, .careerops-simple .question-list { display: grid; gap: 10px; margin-top: 15px; }
+.careerops-simple .queue-item-simple { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.careerops-simple .queue-item-simple:last-child { border-bottom: 0; }
+.careerops-simple .queue-item-simple strong, .careerops-simple .queue-item-simple small { display: block; }
+.careerops-simple .queue-item-simple small { margin-top: 3px; color: var(--muted); font-size: .75rem; }
+.careerops-simple .queue-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+
+.careerops-simple .question-card { padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.careerops-simple .question-card.manual { border-color: #edc7c1; background: #fffafa; }
+.careerops-simple .question-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.careerops-simple .question-card h3 { font-size: .9rem; }
+.careerops-simple .question-card p { margin: 6px 0 11px; color: var(--muted); font-size: .76rem; line-height: 1.45; }
+.careerops-simple .answer-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.careerops-simple .answer-status { color: var(--muted); font-size: .72rem; }
+.careerops-simple .answer-status.approved { color: var(--mint-ink); font-weight: 750; }
+
+.careerops-simple .plan-summary { display: grid; gap: 10px; margin-top: 15px; padding: 14px; border: 1px solid #bfe0ce; border-radius: 12px; background: #f4faf6; }
+.careerops-simple .plan-summary strong { font-size: .9rem; }
+.careerops-simple .plan-summary p { margin: 0; color: var(--muted); font-size: .77rem; line-height: 1.45; }
+.careerops-simple .plan-counts { display: flex; flex-wrap: wrap; gap: 7px; }
+.careerops-simple .plan-counts span { padding: 4px 8px; border-radius: 999px; background: white; border: 1px solid #d6e7dd; color: var(--mint-ink); font-size: .68rem; font-weight: 800; }
+
+.careerops-simple .boundary-list { display: grid; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+.careerops-simple .boundary-list li { position: relative; padding-left: 18px; color: var(--muted); font-size: .77rem; line-height: 1.45; }
+.careerops-simple .boundary-list li::before { position: absolute; left: 0; color: var(--mint-strong); content: "✓"; font-weight: 800; }
+.careerops-simple .simple-divider { height: 1px; margin: 17px 0; background: var(--line); }
+
+@media (max-width: 880px) {
+  .careerops-simple .simple-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .careerops-simple .simple-header { align-items: flex-start; }
+  .careerops-simple .simple-local-status { max-width: 145px; text-align: right; }
+  .careerops-simple .default-grid { grid-template-columns: 1fr; }
+  .careerops-simple .default-grid .span-two { grid-column: auto; }
+  .careerops-simple .queue-item-simple { align-items: flex-start; flex-direction: column; }
+  .careerops-simple .queue-actions { justify-content: flex-start; }
+}

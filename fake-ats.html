@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>CareerOps Demo ATS — Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/fake-ats.css" />
+  </head>
+  <body class="ats-body">
+    <main class="ats-shell">
+      <a class="ats-back" href="index.html">← Back to CareerOps</a>
+      <header class="ats-header">
+        <span class="ats-logo" aria-hidden="true">Δ</span>
+        <div>
+          <p class="eyebrow">Synthetic test environment</p>
+          <h1 id="ats-job-title">Software Engineering Intern</h1>
+          <p id="ats-company" class="ats-company">CareerOps Demo Company</p>
+        </div>
+      </header>
+
+      <div id="ats-notice" class="notice ats-notice">
+        <span aria-hidden="true">ⓘ</span>
+        <span>This is a local fake ATS for testing. Nothing is sent to an employer.</span>
+      </div>
+
+      <section id="application-stage" class="ats-card" aria-labelledby="application-heading">
+        <div class="ats-card-header">
+          <div>
+            <p class="eyebrow">Step 1 of 1</p>
+            <h2 id="application-heading">Your application</h2>
+          </div>
+          <button id="preview-fill" class="button-secondary" type="button">Preview approved fill</button>
+        </div>
+
+        <div id="fill-plan-preview" class="fill-plan-preview" hidden></div>
+
+        <form id="demo-application-form" class="ats-form">
+          <fieldset>
+            <legend>Contact information</legend>
+            <div class="ats-form-grid">
+              <label>
+                First name <span aria-hidden="true">*</span>
+                <input data-careerops-field="firstName" name="firstName" autocomplete="given-name" required />
+              </label>
+              <label>
+                Last name <span aria-hidden="true">*</span>
+                <input data-careerops-field="lastName" name="lastName" autocomplete="family-name" required />
+              </label>
+              <label>
+                Email <span aria-hidden="true">*</span>
+                <input data-careerops-field="email" name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                Phone <span aria-hidden="true">*</span>
+                <input data-careerops-field="phone" name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <label>
+                Current city <span aria-hidden="true">*</span>
+                <input data-careerops-field="city" name="city" autocomplete="address-level2" required />
+              </label>
+              <label>
+                LinkedIn profile
+                <input data-careerops-field="linkedin" name="linkedin" type="url" autocomplete="url" />
+              </label>
+              <label class="full-width">
+                Portfolio or GitHub
+                <input data-careerops-field="website" name="website" type="url" autocomplete="url" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Review-required questions</legend>
+            <div class="ats-form-grid">
+              <label class="full-width">
+                Are you authorized to work in the United States? <span aria-hidden="true">*</span>
+                <select name="workAuthorization" required>
+                  <option value="">Select an answer</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </label>
+              <label class="full-width">
+                Why are you interested in this role? <span aria-hidden="true">*</span>
+                <textarea name="interest" rows="5" required placeholder="Write your own response or paste a reviewed draft."></textarea>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="attestation">
+            <input name="attestation" type="checkbox" required />
+            <span>I certify that the information in this demo application is accurate.</span>
+          </label>
+
+          <div class="ats-submit-row">
+            <p>CareerOps intentionally leaves review-required questions and final submission to you.</p>
+            <button class="button" type="submit">Submit demo application</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="confirmation-stage" class="ats-card confirmation-card" hidden aria-labelledby="confirmation-title">
+        <span class="confirmation-icon" aria-hidden="true">✓</span>
+        <p class="eyebrow">Synthetic confirmation</p>
+        <h2 id="confirmation-title">Your demo application is recorded.</h2>
+        <p>No employer received data. You can return to CareerOps to see how a confirmation event is modeled.</p>
+        <a href="index.html" class="button">Return to CareerOps</a>
+      </section>
+    </main>
+    <script type="module" src="src/fake-ats.js"></script>
+  </body>
+</html>

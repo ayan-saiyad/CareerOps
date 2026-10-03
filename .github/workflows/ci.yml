@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: careerops-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Check and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          check-latest: true
+
+      - name: Report runtime versions
+        run: |
+          node --version
+          npm --version
+
+      # The demo has no runtime dependencies, so CI intentionally does not run
+      # npm install. The scripts use Node's built-in syntax checker and test
+      # runner, which keeps verification offline and reproducible.
+      - name: Check JavaScript syntax
+        run: npm run check
+
+      - name: Run tests
+        run: npm test
